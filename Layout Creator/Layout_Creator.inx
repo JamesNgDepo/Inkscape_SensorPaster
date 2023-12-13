@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Sensor Layout Creator</name>
+    <id>org.inkscape.effect.Layout_Creator</id>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Sensor Layout"/>
+        </effects-menu>
+    </effect>
+    <param name="height" type="float" min="0.1" max="10000" gui-text="Height (mm):">100</param>
+    <param name="width" type="float" min="0.1" max="10000" gui-text="Width (mm):">100</param>
+    <param name="sensor_type" type="enum" gui-text="Choose Sensor Type:" gui-description="Select the type of sensor">
+        <item value="INTENTA S1000">INTENTA S1000</item>
+        <item value="INTENTA S2000">INTENTA S2000</item>
+        <item value="Brickstream">Brickstream</item>
+    </param>
+    <script>
+        <command reldir="extensions" interpreter="python">Layout_Creator.py</command>
+    </script>
+</inkscape-extension>
